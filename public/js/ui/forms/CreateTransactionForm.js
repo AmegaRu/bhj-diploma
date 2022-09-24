@@ -23,7 +23,7 @@ class CreateTransactionForm extends AsyncForm {
         item.innerHTML = "";
       }
 
-      if (resp.success == true) {
+      if (resp && resp.success) {
         resp.data.forEach(item => {
           let account = `<option value="${item.id}">${item.name}</option>`;
           for (let e of accountList) {
